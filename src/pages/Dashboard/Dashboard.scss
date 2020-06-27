@@ -1,0 +1,26 @@
+.Dashboard{
+
+  position: relative;
+
+  &-body{
+    position: absolute;
+    top: 58px;
+    left: 0;
+    bottom: 0;
+    right:0;
+    display: flex;
+
+    &__side-nav{
+      width: 30%;
+      height: 100%;
+    }
+
+    &__content{
+      width: (100% - 25%);
+      height: calc(100vh - 58px);
+      background: rgba(0,0,0, .1);
+    }
+
+  }
+
+}

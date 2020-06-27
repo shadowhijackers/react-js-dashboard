@@ -1,0 +1,37 @@
+.u{
+
+  &-no-margin{
+    margin: 0 !important;
+  }
+
+  &-no-padding{
+    margin: 0 !important;
+  }
+
+  &-shadow{
+    -webkit-box-shadow: 5px 3px 5px rgba(57, 63, 72, 0.3);
+    -moz-box-shadow: 5px 3px 5px rgba(57, 63, 72, 0.3);
+    box-shadow: 5px 3px 5px rgba(57, 63, 72, 0.3);
+  }
+
+  &-display-inline-block{
+    display: inline-block !important;
+  }
+
+  &-flex{
+    display: flex !important;
+  }
+
+  &-align-items-center{
+    align-items: center;
+  }
+
+  &-justify-content-center{
+    align-items: center;
+  }
+
+  &-justify-space-between{
+    justify-content: space-between;
+  }
+
+}

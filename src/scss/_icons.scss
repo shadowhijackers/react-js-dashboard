@@ -1,0 +1,27 @@
+
+@mixin addMenu($svgPath) {
+  -webkit-mask-image: url($svgPath);
+  mask-image: url($svgPath);
+}
+
+.icon {
+  -webkit-mask-size: cover;
+  mask-size: cover;
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+}
+
+$icons: (
+        "menu":"../assets/icons/menu.svg",
+        "bar-chart":"../assets/icons/bar_charts.svg",
+        "update": "../assets/icons/update.svg",
+        "work": "../assets/icons/work.svg",
+        "next-week": "../assets/icons/next_week.svg"
+);
+
+@each $name, $path in $icons {
+  .icon-#{$name} {
+    @include addMenu($path);
+  }
+}

@@ -1,0 +1,8 @@
+@import "scss/reboot";
+@import "scss/variables";
+@import "scss/helper";
+@import "scss/icons";
+
+.menu-icon path{
+  fill: var(--primary-contrastText);
+}

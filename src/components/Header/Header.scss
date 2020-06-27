@@ -1,0 +1,48 @@
+.Header {
+
+  background: var(--primary);
+  color: var(--primary-contrastText);
+  position: fixed;
+  left:0;
+  top:0;
+  right:0;
+  z-index: 1000;
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    place-content: space-between;
+    height: 58px;
+    padding: 8px 16px;
+    box-sizing: border-box;
+  }
+
+  &-left-menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+
+    &__icon {
+      cursor: pointer;
+      width: 24px;
+      height: 24px;
+      display: inline-block;
+      background: var(--primary-contrastText);
+    }
+
+    &__list {
+      list-style: none;
+      display: inline-flex;
+      padding: 0 16px;
+      font-weight: 500;
+    }
+
+    &__list li {
+      cursor: pointer;
+      padding: 0 16px;
+    }
+
+  }
+
+}
