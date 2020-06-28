@@ -34,7 +34,6 @@ class BarChart extends React.Component {
 
 	render() {
 		const config = this._getConfig();
-		console.log(config);
 		return (
 				<HighchartsReact
 					highcharts={Highcharts}

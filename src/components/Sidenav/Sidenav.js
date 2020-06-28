@@ -8,7 +8,6 @@ class Sidenav extends React.Component {
 
 	constructor(props) {
 		super(props);
-		console.log(this.props.toggleSideNavBody);
 		this.state = {
 			charts: this._getChartData()
 		}

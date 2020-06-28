@@ -19,7 +19,6 @@ class Dashboard extends React.Component{
 			...this.state,
 			isMenuOpened: !this.state.isMenuOpened
 		});
-		console.log('Menu state', this.state.isMenuOpened);
 	};
 
 	render() {

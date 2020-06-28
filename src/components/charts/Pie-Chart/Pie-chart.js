@@ -22,7 +22,6 @@ class PieChart extends React.Component {
 	render() {
 
 		const config = this._getConfig();
-		console.log(config);
 
 		return (
 			<HighchartsReact
