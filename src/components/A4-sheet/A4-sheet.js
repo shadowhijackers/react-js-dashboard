@@ -17,7 +17,7 @@ class A4Sheet extends React.Component{
 
 	dragOVerHandler = (ev)=>{
 		ev.preventDefault();
-		ev.dataTransfer.dropEffect = "copy";
+		ev.dataTransfer.dropEffect = "move";
 	};
 
 	render() {
