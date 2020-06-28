@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/shadowhijackers/react-js-dashboard.git/static/css/main.ce2595cd.chunk.css",
-    "main.js": "/shadowhijackers/react-js-dashboard.git/static/js/main.92dc1e07.chunk.js",
-    "main.js.map": "/shadowhijackers/react-js-dashboard.git/static/js/main.92dc1e07.chunk.js.map",
-    "runtime-main.js": "/shadowhijackers/react-js-dashboard.git/static/js/runtime-main.9e786eee.js",
-    "runtime-main.js.map": "/shadowhijackers/react-js-dashboard.git/static/js/runtime-main.9e786eee.js.map",
-    "static/js/2.89fdd905.chunk.js": "/shadowhijackers/react-js-dashboard.git/static/js/2.89fdd905.chunk.js",
-    "static/js/2.89fdd905.chunk.js.map": "/shadowhijackers/react-js-dashboard.git/static/js/2.89fdd905.chunk.js.map",
-    "index.html": "/shadowhijackers/react-js-dashboard.git/index.html",
-    "precache-manifest.985ae648c9325dd88afa266b4b6924b9.js": "/shadowhijackers/react-js-dashboard.git/precache-manifest.985ae648c9325dd88afa266b4b6924b9.js",
-    "service-worker.js": "/shadowhijackers/react-js-dashboard.git/service-worker.js",
-    "static/css/main.ce2595cd.chunk.css.map": "/shadowhijackers/react-js-dashboard.git/static/css/main.ce2595cd.chunk.css.map",
-    "static/js/2.89fdd905.chunk.js.LICENSE.txt": "/shadowhijackers/react-js-dashboard.git/static/js/2.89fdd905.chunk.js.LICENSE.txt",
-    "static/media/index.scss": "/shadowhijackers/react-js-dashboard.git/static/media/work.a1b47ba4.svg"
+    "main.css": "/react-js-dashboard/static/css/main.c0b92f40.chunk.css",
+    "main.js": "/react-js-dashboard/static/js/main.125a4fcf.chunk.js",
+    "main.js.map": "/react-js-dashboard/static/js/main.125a4fcf.chunk.js.map",
+    "runtime-main.js": "/react-js-dashboard/static/js/runtime-main.c56c9bc8.js",
+    "runtime-main.js.map": "/react-js-dashboard/static/js/runtime-main.c56c9bc8.js.map",
+    "static/js/2.89fdd905.chunk.js": "/react-js-dashboard/static/js/2.89fdd905.chunk.js",
+    "static/js/2.89fdd905.chunk.js.map": "/react-js-dashboard/static/js/2.89fdd905.chunk.js.map",
+    "index.html": "/react-js-dashboard/index.html",
+    "precache-manifest.8bac55abb79593dbcdb7ccbb85237eec.js": "/react-js-dashboard/precache-manifest.8bac55abb79593dbcdb7ccbb85237eec.js",
+    "service-worker.js": "/react-js-dashboard/service-worker.js",
+    "static/css/main.c0b92f40.chunk.css.map": "/react-js-dashboard/static/css/main.c0b92f40.chunk.css.map",
+    "static/js/2.89fdd905.chunk.js.LICENSE.txt": "/react-js-dashboard/static/js/2.89fdd905.chunk.js.LICENSE.txt",
+    "static/media/index.scss": "/react-js-dashboard/static/media/work.a1b47ba4.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.9e786eee.js",
+    "static/js/runtime-main.c56c9bc8.js",
     "static/js/2.89fdd905.chunk.js",
-    "static/css/main.ce2595cd.chunk.css",
-    "static/js/main.92dc1e07.chunk.js"
+    "static/css/main.c0b92f40.chunk.css",
+    "static/js/main.125a4fcf.chunk.js"
   ]
 }
