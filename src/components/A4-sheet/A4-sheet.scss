@@ -1,8 +1,12 @@
 .A4Sheet{
 
+  $this: &;
   margin: 16px;
+  display: flex;
+  align-items: center;
+  height: 100%;
 
-  page {
+   &__page {
     background: white;
     display: block;
     margin: 0 auto;
@@ -13,6 +17,12 @@
     //height: 29.7cm;
     height: 14.5cm;
     position: relative;
+
+    #{$this}__chart{
+      position: fixed;
+      display: inline-block;
+    }
+
   }
 
 }

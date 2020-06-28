@@ -13,8 +13,12 @@ class Sidenav extends React.Component {
 		}
 	}
 
-	drag = (ev) => {
-		ev.dataTransfer.setData("chart", ev.target.id);
+	dragStartHandler = (ev) => {
+		ev.dataTransfer.setData("text/plain", ev.target.id);
+	};
+
+	dragEndHandler = (ev) => {
+		ev.dataTransfer.clearData();
 	};
 
 	render() {
@@ -47,13 +51,32 @@ class Sidenav extends React.Component {
 								<span>See all</span>
 							</div>
 							<div className="Sidenav-body-item__body">
-								<div draggable="true" id="bar-1" onDragStart={(ev)=>{this.drag(ev)}}>
-									<BarChart  config={this.state.charts.bar}/>
+								<div
+									draggable="true"
+									id="bar-1"
+									onDragStart={(ev) => {
+										this.dragStartHandler(ev)
+									}}
+									onDragEnd={event => this.dragStartHandler(event)}
+								>
+									<BarChart config={this.state.charts.bar}/>
 								</div>
-								<div draggable="true" id="pie" onDragStart={(ev)=>{this.drag(ev)}} >
+								<div
+									draggable="true"
+									id="pie"
+									onDragStart={(ev) => {
+										this.dragStartHandler(ev)
+									}}
+									onDragEnd={event => this.dragStartHandler(event)}
+								>
 									<PieChart config={this.state.charts.pie}/>
 								</div>
-								<div draggable="true" id="bar-2" onDragStart={(ev)=>{this.drag(ev)}} >
+								<div
+									draggable="true"
+									id="bar-2"
+									onDragStart={(ev) => this.dragStartHandler(ev)}
+									onDragEnd={event => this.dragEndHandler(event)}
+								>
 									<BarChart config={this.state.charts.bar}/>
 								</div>
 							</div>
