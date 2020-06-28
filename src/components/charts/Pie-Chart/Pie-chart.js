@@ -12,18 +12,6 @@ class PieChart extends React.Component {
 		}
 	}
 
-	_getConfig() {
-		return {
-			chart: {
-				type: "pie"
-			},
-			title: {
-				text: ''
-			},
-			...this.state.config
-		}
-	}
-
 	componentDidMount() {
 		const container = this.chartComponent.current.container.current;
 		container.style.height = this.state.config.height;
@@ -43,6 +31,19 @@ class PieChart extends React.Component {
 				ref={ this.chartComponent}
 			/>
 		)
+	}
+
+
+	_getConfig() {
+		return {
+			chart: {
+				type: "pie"
+			},
+			title: {
+				text: ''
+			},
+			...this.state.config
+		}
 	}
 
 }

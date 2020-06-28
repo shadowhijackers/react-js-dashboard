@@ -8,6 +8,7 @@ class Sidenav extends React.Component {
 
 	constructor(props) {
 		super(props);
+		console.log(this.props.toggleSideNavBody);
 		this.state = {
 			charts: this._getChartData()
 		}
@@ -43,11 +44,12 @@ class Sidenav extends React.Component {
 						</ul>
 					</section>
 
+					{this.props.toggleSideNavBody &&
 					<section className="Sidenav-body">
 
 						<article className="Sidenav-body-item">
 							<div className="Sidenav-body-item__header">
-								<h4 className="u-no-margin">Charts</h4>
+								<h4 className="u-no-margin">Charts </h4>
 								<span>See all</span>
 							</div>
 							<div className="Sidenav-body-item__body">
@@ -83,6 +85,7 @@ class Sidenav extends React.Component {
 						</article>
 
 					</section>
+					}
 
 				</div>
 			</section>

@@ -19,7 +19,8 @@
     color: var(--primary-contrastText);
     position: relative;
     font-size: 13px;
-    width: 80px;
+    min-width: 80px;
+    box-sizing: border-box;
 
     &__container {
       display: flex;
@@ -63,7 +64,7 @@
   &-body {
 
     background: $light-background;
-    width: 100%;
+    min-width: 370px;
     color: var(--primary-contrastText);
     overflow-y: auto;
     position: relative;

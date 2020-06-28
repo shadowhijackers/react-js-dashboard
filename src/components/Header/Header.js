@@ -9,6 +9,33 @@ class Header extends React.Component {
 		this.navigations = this._getNavigations();
 	}
 
+	render() {
+
+		const navigationElements = this.navigations.map((nav, i)=>{
+			return <li key={i}>{nav.name}</li>
+		});
+
+		return (
+			<header className="Header u-shadow">
+				<div className="Header__wrapper">
+
+					<section className="Header-left-menu">
+						<i
+							className="Header-left-menu__icon icon icon-menu"
+							onClick={this.props.toggleMenuCallBack}
+						/>
+						<nav>
+							<ul className="Header-left-menu__list">
+								{navigationElements}
+							</ul>
+						</nav>
+					</section>
+
+				</div>
+			</header>
+		);
+	}
+
 	_getNavigations(){
 		return [
 			{
@@ -29,29 +56,7 @@ class Header extends React.Component {
 			}
 		]
 	}
-	render() {
 
-		const navigationElements = this.navigations.map((nav, i)=>{
-			return <li key={i}>{nav.name}</li>
-		});
-
-		return (
-			<header className="Header u-shadow">
-				<div className="Header__wrapper">
-
-					<section className="Header-left-menu">
-						<i className="Header-left-menu__icon icon icon-menu"/>
-						<nav>
-							<ul className="Header-left-menu__list">
-								{navigationElements}
-							</ul>
-						</nav>
-					</section>
-
-				</div>
-			</header>
-		);
-	}
 }
 
 export default Header;

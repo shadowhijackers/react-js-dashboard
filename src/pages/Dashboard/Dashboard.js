@@ -7,15 +7,30 @@ import A4Sheet from "../../components/A4-sheet/A4-sheet";
 
 class Dashboard extends React.Component{
 
+	constructor(props) {
+		super(props);
+		this.state = {
+			isMenuOpened: true
+		}
+	}
+
+	toggleMenu = (ev)=>{
+		this.setState({
+			...this.state,
+			isMenuOpened: !this.state.isMenuOpened
+		});
+		console.log('Menu state', this.state.isMenuOpened);
+	};
+
 	render() {
 		return (
 			<div className="Dashboard">
 				<div>
-					<Header />
+					<Header toggleMenuCallBack={this.toggleMenu} />
 				</div>
 				<div className="Dashboard-body">
 					<section className="Dashboard-body__side-nav">
-						<Sidenav />
+						<Sidenav toggleSideNavBody={this.state.isMenuOpened} />
 					</section>
 					<main className="Dashboard-body__content">
 						<A4Sheet />
