@@ -22,7 +22,9 @@ test("render pie chart", () => {
             name: "Other",
             y: 2.61,
           },
-        ],
+
+
+   ],
       },
     ],
   };

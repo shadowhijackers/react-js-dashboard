@@ -6,7 +6,9 @@ module.exports = {
 	},
 	"extends": [
 		"eslint:recommended",
-		"plugin:react/recommended"
+		"plugin:react/recommended",
+		"prettier",
+		"prettier/react",
 	],
 	"globals": {
 		"Atomics": "readonly",
@@ -24,8 +26,8 @@ module.exports = {
 		"react"
 	],
 	"rules": {
-	    "react/prop-types": 0
-  },
+		"react/prop-types": 0
+	},
 	"settings": {
 		"react": {
 			"version": "detect"
