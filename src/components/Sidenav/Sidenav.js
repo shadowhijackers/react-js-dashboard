@@ -1,15 +1,17 @@
 import React from "react";
+import {connect} from "react-redux";
 
 import './Sidenav.scss';
 import BarChart from '../charts/Bar-chart/Bar-chart'
 import PieChart from '../charts/Pie-Chart/Pie-chart'
+import {ChartService} from "../../services/chart.service";
 
 class Sidenav extends React.Component {
 
 	constructor(props) {
 		super(props);
 		this.state = {
-			charts: this._getChartData()
+			charts: ChartService.getChartData()
 		}
 	}
 
@@ -18,7 +20,7 @@ class Sidenav extends React.Component {
 	};
 
 	dragEndHandler = (ev) => {
-		ev.dataTransfer.clearData();
+		ev.dataTransfer.clearData("text/plain");
 	};
 
 	render() {
@@ -52,34 +54,23 @@ class Sidenav extends React.Component {
 								<span>See all</span>
 							</div>
 							<div className="Sidenav-body-item__body">
-								<div
-									draggable="true"
-									id="bar-1"
-									onDragStart={(ev) => {
-										this.dragStartHandler(ev)
-									}}
-									onDragEnd={event => this.dragStartHandler(event)}
-								>
-									<BarChart config={this.state.charts.bar}/>
-								</div>
-								<div
-									draggable="true"
-									id="pie"
-									onDragStart={(ev) => {
-										this.dragStartHandler(ev)
-									}}
-									onDragEnd={event => this.dragStartHandler(event)}
-								>
-									<PieChart config={this.state.charts.pie}/>
-								</div>
-								<div
-									draggable="true"
-									id="bar-2"
-									onDragStart={(ev) => this.dragStartHandler(ev)}
-									onDragEnd={event => this.dragEndHandler(event)}
-								>
-									<BarChart config={this.state.charts.bar}/>
-								</div>
+								{
+									this.props.chartData.map((chart, i) => {
+										return (<div
+											key={chart.id}
+											draggable="true"
+											id={chart.id}
+											onDragStart={(ev) => {
+												this.dragStartHandler(ev)
+											}}
+											onDragEnd={event => this.dragStartHandler(event)}>
+											{chart.type === 'bar' ? <BarChart config={this.state.charts.bar}/> :
+												<PieChart config={this.state.charts.pie}/>
+											}
+										</div>)
+									})
+								}
+
 							</div>
 						</article>
 
@@ -91,101 +82,7 @@ class Sidenav extends React.Component {
 		);
 	}
 
-	_getChartData() {
-		return {
-			bar: this._getBarChartConfig(),
-			pie: this._getPieChartConfig()
-		};
-	}
-
-	_getBarChartConfig() {
-		return {
-			...this._getChartConfig(),
-			chart: {
-				type: 'bar',
-				backgroundColor: "rgba(0,0,0,0)"
-			},
-			series: [{
-				color: "#757ce8",
-				data: [1, 5, 3, 4]
-			}]
-		}
-	}
-
-	_getPieChartConfig() {
-		return {
-			...this._getChartConfig(),
-			width: '150px',
-			height: '120px',
-			chart: {
-				type: 'pie',
-				plotBackgroundColor: null,
-				plotBorderWidth: null,
-				plotShadow: false,
-				backgroundColor: 'rgba(0,0,0,0)'
-			},
-			plotOptions: {
-				pie: {
-					allowPointSelect: false,
-					cursor: 'pointer',
-					dataLabels: {
-						enabled: false,
-					},
-					showInLegend: false
-				}
-			},
-			series: [{
-				name: 'Brands',
-				data: [{
-					name: 'Chrome',
-					y: 61.41
-				}, {
-					name: 'Internet Explorer',
-					y: 11.84
-				}, {
-					name: 'Firefox',
-					y: 10.85
-				}, {
-					name: 'Edge',
-					y: 4.67
-				}, {
-					name: 'Safari',
-					y: 4.18
-				}, {
-					name: 'Other',
-					y: 2.61
-				}]
-			}]
-		}
-	}
-
-	_getChartConfig() {
-		return {
-			width: '150px',
-			height: '120px',
-			credits: {
-				enabled: false
-			},
-			xAxis: {
-				title: false,
-				labels: {
-					enabled: false
-				}
-			},
-			yAxis: {
-				title: false,
-				labels: {
-					enabled: false
-				}
-			},
-			legend: {
-				enabled: false
-			},
-			tooltip: {
-				enabled: false
-			},
-		}
-	}
 }
 
+Sidenav = connect(state => state.sideNav)(Sidenav);
 export default Sidenav;

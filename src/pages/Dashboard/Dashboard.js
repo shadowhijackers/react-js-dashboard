@@ -11,7 +11,7 @@ class Dashboard extends React.Component{
 		super(props);
 		this.state = {
 			isMenuOpened: true
-		}
+		};
 	}
 
 	toggleMenu = (ev)=>{
@@ -22,10 +22,11 @@ class Dashboard extends React.Component{
 	};
 
 	render() {
+
 		return (
 			<div className="Dashboard">
 				<div>
-					<Header toggleMenuCallBack={this.toggleMenu} />
+					{React.createElement(Header, {toggleMenuCallBack: this.toggleMenu})}
 				</div>
 				<div className="Dashboard-body">
 					<section className="Dashboard-body__side-nav">
@@ -40,5 +41,4 @@ class Dashboard extends React.Component{
 	}
 
 }
-
 export default Dashboard;
