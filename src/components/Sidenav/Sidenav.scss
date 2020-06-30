@@ -1,5 +1,4 @@
 .Sidenav {
-
   $this: &;
   $light-background: rgb(70, 70, 70);
 
@@ -13,7 +12,6 @@
   }
 
   &-list {
-
     background: rgba(25, 25, 25, 1);
     list-style: none;
     color: var(--primary-contrastText);
@@ -43,11 +41,9 @@
       label {
         margin-top: 8px;
       }
-
     }
 
     &__item--active {
-
       background: $light-background;
       color: white !important;
       position: relative;
@@ -56,13 +52,10 @@
         display: inline-block;
         background: white;
       }
-
     }
-
   }
 
   &-body {
-
     background: $light-background;
     min-width: 370px;
     color: var(--primary-contrastText);
@@ -70,7 +63,6 @@
     position: relative;
 
     &-item {
-
       padding: 16px;
 
       &__header {
@@ -91,7 +83,7 @@
         margin-top: 8px;
       }
 
-      &__body div{
+      &__body div {
         flex-shrink: 0;
         display: inline-block;
       }
@@ -100,14 +92,10 @@
         width: 0;
         height: 0;
       }
-
-
     }
 
-    &-item:first-child{
+    &-item:first-child {
       margin-top: 16px;
     }
-
   }
-
 }

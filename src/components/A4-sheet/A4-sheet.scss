@@ -1,27 +1,24 @@
-.A4Sheet{
-
+.A4Sheet {
   $this: &;
   display: flex;
   align-items: center;
   height: 100%;
 
-   &__page {
+  &__page {
     background: white;
     display: block;
     margin: 0 auto;
     margin-bottom: 0.5cm;
-    box-shadow: 0 0 5px rgba(0,0,0,0.5);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
     //width: 21cm;
     width: 11cm;
     //height: 29.7cm;
     height: 14.5cm;
     position: relative;
 
-    #{$this}__chart{
+    #{$this}__chart {
       position: fixed;
       display: inline-block;
     }
-
   }
-
 }

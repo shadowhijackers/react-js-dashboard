@@ -1,11 +1,10 @@
 .Header {
-
   background: var(--primary);
   color: var(--primary-contrastText);
   position: fixed;
-  left:0;
-  top:0;
-  right:0;
+  left: 0;
+  top: 0;
+  right: 0;
   z-index: 1000;
 
   &__wrapper {
@@ -42,7 +41,5 @@
       cursor: pointer;
       padding: 0 16px;
     }
-
   }
-
 }

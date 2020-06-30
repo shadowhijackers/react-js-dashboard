@@ -1,15 +1,12 @@
 const SidenavAction = Object.freeze({
-	REMOVE_CHART: '[SIDENAV] REMOVE Chart',
+  REMOVE_CHART: "[SIDENAV] REMOVE Chart",
 });
 
-const removeChart = (payload)=>{
-	return {
-		type: SidenavAction.REMOVE_CHART,
-		payload
-	}
+const removeChart = (payload) => {
+  return {
+    type: SidenavAction.REMOVE_CHART,
+    payload,
+  };
 };
 
-export {
-	removeChart,
-	SidenavAction
-}
+export { removeChart, SidenavAction };
