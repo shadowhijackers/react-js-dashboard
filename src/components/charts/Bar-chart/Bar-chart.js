@@ -1,6 +1,7 @@
-import React from "react";
+import React from 'react';
 import * as Highcharts from 'highcharts';
 import HighchartsReact from 'highcharts-react-official';
+
 
 class BarChart extends React.Component {
 
