@@ -50,7 +50,7 @@ class Sidenav extends React.Component {
 
 						<article className="Sidenav-body-item">
 							<div className="Sidenav-body-item__header">
-								<h4 className="u-no-margin">Charts </h4>
+								<h4 className="u-no-margin">Charts</h4>
 								<span>See all</span>
 							</div>
 							<div className="Sidenav-body-item__body">
