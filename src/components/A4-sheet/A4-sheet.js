@@ -21,17 +21,13 @@ class A4Sheet extends React.Component {
     if (existItem) {
       // todo update state
       const existEl = document.getElementById(existItem.id);
-      const box = existEl.getBoundingClientRect();
-      existEl.style.left = ev.clientX - box.width / 2 + "px";
-      existEl.style.top = ev.clientY - box.height / 2 + "px";
+      const {shiftX, shiftY} = this._getPosition(ev, existItem.id);
+      existEl.style.left = shiftX;
+      existEl.style.top = shiftY;
       return;
     }
 
-    const clonedNode = document.getElementById(data);
-    const box = clonedNode.getBoundingClientRect();
-    const shiftX = ev.clientX - box.width / 2 + "px";
-    const shiftY = ev.clientY - box.height / 2 + "px";
-
+    const {shiftX, shiftY} = this._getPosition(ev, data);
     const { dispatch } = this.props;
     dispatch(
       addChart({
@@ -86,6 +82,21 @@ class A4Sheet extends React.Component {
       </div>
     );
   }
+
+  _getPosition(ev, id){
+    const existEl = document.getElementById(id);
+    const box = existEl.getBoundingClientRect();
+    const targetBox = ev.target.getBoundingClientRect();
+    const shiftX =  ev.clientX - (targetBox.left + box.width / 2 )+ "px";
+    const shiftY = ev.clientY - (targetBox.top +  box.height / 2 ) + "px";
+    existEl.style.left = shiftX;
+    existEl.style.top = shiftY;
+    return {
+      shiftX,
+      shiftY
+    }
+  }
+
 }
 
 A4Sheet = connect((state) => state.a4Sheet)(A4Sheet);

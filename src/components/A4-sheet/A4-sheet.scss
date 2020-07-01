@@ -17,7 +17,7 @@
     position: relative;
 
     #{$this}__chart {
-      position: fixed;
+      position: absolute;
       display: inline-block;
     }
   }
